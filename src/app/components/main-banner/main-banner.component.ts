@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import cv from '../../data/cv.json';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-main-banner',
@@ -9,5 +8,8 @@ import cv from '../../data/cv.json';
   styleUrl: './main-banner.component.scss'
 })
 export class MainBannerComponent {
-  cv = cv
+  @Input() name: string
+  @Input() sentences: string[]
+
+  constructor () {}
 }
