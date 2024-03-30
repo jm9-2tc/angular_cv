@@ -1,5 +1,11 @@
 :host ::ng-deep {
-    .mat-mdc-tab-labels > div {
-        min-width: 15vw !important;
+    mat-tab-group.cv-cards .mat-mdc-tab {
+        min-width: 15dvw;
     }
+}
+
+.dark-mode-btn {
+    position: fixed;
+    bottom: 4vh;
+    right: 2vw;
 }
