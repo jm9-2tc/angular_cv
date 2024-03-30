@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import AboutMe from '../../models/about-me.model';
 
 @Injectable({
@@ -15,7 +14,7 @@ export class CvDataService {
   getAboutMe(): AboutMe {
     return {
       name: "Jan Marmucki",
-      sentences: ["web apps", "great fuckup oppourtunities"],
+      sentences: ["web apps", "great fuckup opportunities"],
       description: "I am. I live. I code."
     }
   }

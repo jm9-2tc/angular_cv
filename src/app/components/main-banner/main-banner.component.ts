@@ -8,8 +8,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './main-banner.component.scss'
 })
 export class MainBannerComponent {
-  @Input() name: string
-  @Input() sentences: string[]
-
-  constructor () {}
+  @Input({ required: true }) name!: string;
+  @Input({ required: true }) sentences!: string[];
 }
