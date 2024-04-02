@@ -1,9 +1,9 @@
 import { HttpClient } from "@angular/common/http";
 import { TranslateLoader } from "@ngx-translate/core";
 import { Observable, forkJoin, map } from "rxjs";
-import { environment } from "../../../environments/environment";
+import { environment } from "../../environments/environment";
 
-import * as WebsiteStaticText from '../../../assets/website-static-text.json';
+import websiteStaticText from '../../assets/website-static-text.json';
 
 
 export class CvTranslateLoader implements TranslateLoader {
@@ -45,9 +45,10 @@ export class CvTranslateLoader implements TranslateLoader {
 
             const result: TResult = {};
             const staticText: TResult = {}
-            scanForTranslations(staticText, cvData);
+            scanForTranslations(staticText, websiteStaticText);
             scanForTranslations(result, cvData);
             result['staticText'] = staticText;
+            console.log(result);
             return result;
         }));
     }

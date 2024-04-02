@@ -3,6 +3,7 @@
 /* import components to theme: */
 
 @use '../app/components/menu/menu.component.scss' as menu-component;
+@use '../app/components/sidelined-paragraph/sidelined-paragraph.component.scss' as sidelined-paragraph-component;
 
 /* end */
 
@@ -42,3 +43,4 @@ $cv-theme: mat.define-dark-theme((
 /* Theming components */
 
 @include menu-component.theme($cv-theme);
+@include sidelined-paragraph-component.theme($cv-theme);

@@ -1,0 +1,26 @@
+@use '@angular/material' as mat;
+
+.paragraph {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+
+.sideline {
+    flex: 1;
+    width: 4px;
+}
+
+p {
+    margin: 1em 1.5em;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+@mixin theme($theme) {
+    $color: mat.get-theme-color($theme, primary, default);
+
+    .sideline {
+        background-color: $color;
+    }
+}

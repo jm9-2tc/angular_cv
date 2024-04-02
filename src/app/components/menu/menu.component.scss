@@ -25,6 +25,12 @@
 @mixin theme($theme) {
     $underline-color: #ffffff34;
     $underline-hover-color: mat.get-theme-color($theme, primary, default);
+    $text-color: mat.get-theme-color($theme, primary, default-contrast);
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+    }
 
     #menu-container > a {
         border-bottom: 4px solid $underline-color;

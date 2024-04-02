@@ -3,10 +3,11 @@
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
 @import "styles/theme.scss";
 
-html, body { height: 100%; }
+html, body, app-root { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .site-content {
-    width: 50vw;
+    width: 80vw;
     margin: auto;
+    margin-top: 16em;
 }

@@ -1,22 +1,16 @@
 import { Component } from '@angular/core';
-import { MainBannerComponent } from "../main-banner/main-banner.component";
-import { CvDataService } from '../../services/cv-data/cv-data.service';
-import AboutMe from '../../models/about-me.model';
+
 import { SidelinedParagraphComponent } from "../sidelined-paragraph/sidelined-paragraph.component";
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-site-about',
-    standalone: true,
+    standalone: false,
     templateUrl: './site-about.component.html',
-    styleUrl: './site-about.component.scss',
-    imports: [MainBannerComponent, SidelinedParagraphComponent]
+    styleUrl: './site-about.component.scss'
 })
 export class SiteAboutComponent {
-    aboutMe: AboutMe
-
-    constructor (
-        private cvDataService: CvDataService
-    ) {
-        this.aboutMe = cvDataService.getAboutMe();
+    constructor (translate: TranslateService) {
+        console.log(translate.getTranslation(''));
     }
 }
