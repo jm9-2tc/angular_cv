@@ -1,0 +1,44 @@
+@use '@angular/material' as mat;
+
+#menu-container {
+    position: fixed;
+    top: 2em;
+    right: 2em;
+    counter-reset: nav-btns;
+}
+
+#menu-container > a {
+    margin: 1em;
+    font-size: 24px;
+    font-weight: 400;
+    counter-increment: nav-btns;
+    transition: linear 0.3s;
+    cursor: pointer;
+}
+
+#menu-container > a::before {
+    content: counter(nav-btns) ". ";
+    font-size: 30px;
+    font-weight: 600;
+}
+
+@mixin theme($theme) {
+    $underline-color: #ffffff34;
+    $underline-hover-color: mat.get-theme-color($theme, primary, default);
+
+    #menu-container > a {
+        border-bottom: 4px solid $underline-color;
+    }
+
+    #menu-container > a:hover {
+        border-bottom-color: $underline-hover-color;
+    }
+
+    #menu-container > a::before {
+        color: $underline-color;
+    }
+
+    #menu-container > a:hover::before {
+        color: $underline-hover-color;
+    }
+}

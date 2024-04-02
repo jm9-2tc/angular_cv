@@ -1,21 +1,5 @@
 <main class="main">
-    
-    <mat-tab-group class="cv-cards" mat-stretch-tabs="false" mat-align-tabs="end">
-        <mat-tab label="First">
-            <app-site-about />
-        </mat-tab>
-        <mat-tab label="Second">
-
-        </mat-tab>
-        <mat-tab label="Third">
-
-        </mat-tab>
-
-    </mat-tab-group>
-
-    <button class="dark-mode-btn" mat-fab color="primary" aria-label="Toggle dark theme">
-        <mat-icon>{{ useDarkMode ? 'wb_sunny' : 'nights_stay' }}</mat-icon>
-    </button>
+    <app-menu />
 </main>
 
 <router-outlet />
