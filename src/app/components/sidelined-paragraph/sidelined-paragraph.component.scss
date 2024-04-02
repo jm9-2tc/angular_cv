@@ -8,13 +8,13 @@
 
 .sideline {
     flex: 1;
-    width: 4px;
+    min-width: 4px;
 }
 
 p {
     margin: 1em 1.5em;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 28px;
 }
 
 @mixin theme($theme) {

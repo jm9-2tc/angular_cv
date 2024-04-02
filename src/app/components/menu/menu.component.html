@@ -1,4 +1,10 @@
 <div id="menu-container">
+    <div id="lang-switch">
+        <span>EN</span>
+        <mat-slide-toggle (change)="switchLanguage()" hideIcon="true" />
+        <span>PL</span>
+    </div>
+
     <a routerLink="/" routerLinkActive="active">about me</a>
     <a routerLink="/qualifications" routerLinkActive="active">qualifications</a>
 </div>

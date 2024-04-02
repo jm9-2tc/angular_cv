@@ -5,21 +5,45 @@
     top: 2em;
     right: 2em;
     counter-reset: nav-btns;
+    display: flex;
+    flex-direction: row;
+
+    a {
+        margin: 1em;
+        font-size: 18px;
+        font-weight: 400;
+        counter-increment: nav-btns;
+        transition: linear 0.3s;
+        text-decoration: none;
+        cursor: pointer;
+
+        ::before {
+            content: counter(nav-btns) ". ";
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
 }
 
-#menu-container > a {
-    margin: 1em;
-    font-size: 24px;
-    font-weight: 400;
-    counter-increment: nav-btns;
-    transition: linear 0.3s;
-    cursor: pointer;
+#lang-switch {
+    margin: auto;
+
+    span {
+        font-size: 16px;
+        margin: 4px;
+    }
 }
 
-#menu-container > a::before {
-    content: counter(nav-btns) ". ";
-    font-size: 30px;
-    font-weight: 600;
+:host ::ng-deep {
+    mat-slide-toggle {
+        /*.mdc-switch__track::before, .mdc-switch__track::after {
+            background-color: red !important;
+        }
+
+        .mdc-switch__handle::after {
+            background-color: green !important;
+        }*/
+    } 
 }
 
 @mixin theme($theme) {
@@ -27,24 +51,20 @@
     $underline-hover-color: mat.get-theme-color($theme, primary, default);
     $text-color: mat.get-theme-color($theme, primary, default-contrast);
 
-    a {
-        color: $text-color;
-        text-decoration: none;
-    }
-
     #menu-container > a {
-        border-bottom: 4px solid $underline-color;
-    }
+        color: $text-color;
+        border-bottom: 2px solid $underline-color;
 
-    #menu-container > a:hover {
-        border-bottom-color: $underline-hover-color;
-    }
+        :hover {
+            border-bottom-color: $underline-hover-color;
+        }
 
-    #menu-container > a::before {
-        color: $underline-color;
-    }
+        ::before {
+            color: $underline-color;
+        }
 
-    #menu-container > a:hover::before {
-        color: $underline-hover-color;
+        :hover::before {
+            color: $underline-hover-color;
+        }
     }
 }

@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { provideClientHydration } from "@angular/platform-browser";
+import { BrowserModule, provideClientHydration } from "@angular/platform-browser";
 import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
 import { HttpClient, provideHttpClient } from "@angular/common/http";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
@@ -13,6 +13,8 @@ import { MenuComponent } from "./components/menu/menu.component";
 import { SiteAboutComponent } from "./components/site-about/site-about.component";
 import { SidelinedParagraphComponent } from "./components/sidelined-paragraph/sidelined-paragraph.component";
 
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -21,6 +23,7 @@ import { SidelinedParagraphComponent } from "./components/sidelined-paragraph/si
         MenuComponent
     ],
     imports: [
+        BrowserModule,
         TranslateModule.forRoot({
             defaultLanguage: 'en',
             useDefaultLang: true,
@@ -31,6 +34,10 @@ import { SidelinedParagraphComponent } from "./components/sidelined-paragraph/si
             }
         }),
         RouterModule.forRoot(routes),
+
+        // components:
+
+        MatSlideToggleModule
     ],
     providers: [
         provideClientHydration(),

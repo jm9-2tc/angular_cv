@@ -4,6 +4,7 @@
 
 @use '../app/components/menu/menu.component.scss' as menu-component;
 @use '../app/components/sidelined-paragraph/sidelined-paragraph.component.scss' as sidelined-paragraph-component;
+@use '../app/components/site-about/site-about.component.scss' as site-about-component;
 
 /* end */
 
@@ -44,3 +45,4 @@ $cv-theme: mat.define-dark-theme((
 
 @include menu-component.theme($cv-theme);
 @include sidelined-paragraph-component.theme($cv-theme);
+@include site-about-component.theme($cv-theme);
