@@ -14,13 +14,16 @@ import { SiteAboutComponent } from "./components/site-about/site-about.component
 import { SidelinedParagraphComponent } from "./components/sidelined-paragraph/sidelined-paragraph.component";
 
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { SlidingPanelComponent } from './components/sliding-panel/sliding-panel.component';
+import { MatIconModule } from "@angular/material/icon";
 
 @NgModule({
     declarations: [
         AppComponent,
         SidelinedParagraphComponent,
         SiteAboutComponent,
-        MenuComponent
+        MenuComponent,
+        SlidingPanelComponent
     ],
     imports: [
         BrowserModule,
@@ -37,6 +40,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
         // components:
 
+        MatIconModule,
         MatSlideToggleModule
     ],
     providers: [
