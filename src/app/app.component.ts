@@ -16,9 +16,6 @@ import { TranslateService, } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'angular-cv';
-  useDarkMode = false;
 
-  constructor(private translate: TranslateService) {
-    translate.get('aboutMe.name').forEach(t => console.log('TRANSLATION: ' + t))
-  }
+  constructor() {}
 }

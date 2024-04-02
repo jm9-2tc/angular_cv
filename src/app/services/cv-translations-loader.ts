@@ -48,7 +48,6 @@ export class CvTranslateLoader implements TranslateLoader {
             scanForTranslations(staticText, websiteStaticText);
             scanForTranslations(result, cvData);
             result['staticText'] = staticText;
-            console.log(result);
             return result;
         }));
     }

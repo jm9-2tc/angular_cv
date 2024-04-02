@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-
-import { SidelinedParagraphComponent } from "../sidelined-paragraph/sidelined-paragraph.component";
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-site-about',
@@ -10,7 +8,5 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     styleUrl: './site-about.component.scss'
 })
 export class SiteAboutComponent {
-    constructor (translate: TranslateService) {
-        console.log(translate.getTranslation(''));
-    }
+    constructor (translate: TranslateService) {}
 }
