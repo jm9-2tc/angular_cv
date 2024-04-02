@@ -1,0 +1,8 @@
+{
+    "welcomeMessage": {
+        "$translate": {
+            "en": "Welcome",
+            "pl": "Witaj"
+        }
+    }
+}
