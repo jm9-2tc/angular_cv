@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Location } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,20 +11,39 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class MenuComponent implements AfterViewInit {
 
-  @ViewChild('selectedByDefault')
-  private btnSelectedByDefaultRef!: ElementRef;
+  //@ViewChild('selectedByDefault')
+  //private btnSelectedByDefaultRef!: ;
+
+  @ViewChildren(RouterLink, { read: ElementRef })
+  private sectionBtns!: QueryList<ElementRef>;
 
   private useEnglish: boolean;
   private lastClickedBtn?: HTMLElement;
 
-  constructor(private translate: TranslateService) {
+  sections = [
+    {title: 'about', link: '/'},
+    {title: 'qualifications', link: '/qualifications'},
+    {title: 'projects', link: '/projects'},
+    {title: 'contact', link: '/contact'},
+  ]
+
+  constructor(private translate: TranslateService, private location: Location) {
     translate.addLangs(['pl', 'en']);
     translate.use('en');
     this.useEnglish = true;
   }
 
   ngAfterViewInit(): void {
-    this.selectSectionBtn(this.btnSelectedByDefaultRef.nativeElement);
+    const currentRoute = this.location.path();
+    let i = 0;
+
+    this.sectionBtns.forEach((btnRef) => {
+      const btn = btnRef.nativeElement;
+      const href = btn.attributes.getNamedItem('ng-reflect-router-link')?.value;
+      if (href == currentRoute) {
+        this.selectSectionBtn(btn);
+      }
+    });
   }
 
   switchLanguage() {
