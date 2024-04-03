@@ -18,11 +18,15 @@ export class CvTranslateLoader implements TranslateLoader {
                 for (let propName in obj) {
                     const prop = obj[propName];
                     if (Array.isArray(prop)) {
-                        const propArr: TResult[] = [];
+                        const propArr: any[] = [];
                         prop.forEach(el => {
-                            const obj: TResult = {};
-                            propArr.push(obj);
-                            scanForTranslations(obj, el);
+                            if (el instanceof Object) {
+                                const obj: TResult = {};
+                                propArr.push(obj);
+                                scanForTranslations(obj, el);
+                            } else {
+                                propArr.push(el);
+                            }
                         });
                         result[propName] = propArr;
                     } else if (prop instanceof Object) {
