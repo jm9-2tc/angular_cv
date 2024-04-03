@@ -1,26 +1,26 @@
 @use '@angular/material' as mat;
 
-.paragraph {
+.sidelined-paragraph {
     width: fit-content;
     height: fit-content;
     display: flex;
-}
 
-.sideline {
-    flex: 1;
-    min-width: 4px;
-}
-
-p {
-    margin: 1em 1.5em;
-    font-size: 20px;
-    line-height: 28px;
+    .sideline {
+        flex: 1;
+        min-width: 4px;
+    }
+    
+    p {
+        margin: 1em 1.5em;
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 
 @mixin theme($theme) {
     $color: mat.get-theme-color($theme, primary, default);
 
-    .sideline {
+    .sidelined-paragraph .sideline {
         background-color: $color;
     }
 }

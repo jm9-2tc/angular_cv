@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 
-#menu-container {
+.menu-container {
     position: fixed;
     top: 2em;
     right: 2em;
@@ -23,27 +23,15 @@
             font-weight: 600;
         }
     }
-}
 
-#lang-switch {
-    margin: auto;
-
-    span {
-        font-size: 16px;
-        margin: 4px;
-    }
-}
-
-:host ::ng-deep {
-    mat-slide-toggle {
-        /*.mdc-switch__track::before, .mdc-switch__track::after {
-            background-color: red !important;
+    .lang-switch {
+        margin: auto;
+    
+        span {
+            font-size: 16px;
+            margin: 4px;
         }
-
-        .mdc-switch__handle::after {
-            background-color: green !important;
-        }*/
-    } 
+    }
 }
 
 @mixin theme($theme) {
@@ -51,7 +39,7 @@
     $underline-hover-color: mat.get-theme-color($theme, primary, default);
     $text-color: mat.get-theme-color($theme, primary, default-contrast);
 
-    #menu-container > a {
+    .menu-container > a {
         color: $text-color;
         border-bottom: 2px solid $underline-color;
 

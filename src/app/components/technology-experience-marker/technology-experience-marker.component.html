@@ -1,0 +1,8 @@
+<div class="tech-container">
+    <img [alt]="technology.title + ' logo'" [src]="technology.imagePath">
+
+    <div>
+        <h1>{{ technology.title }}</h1>
+        <mat-progress-bar mode="determinate" [value]="technology.knowledgeLevel" [color]="getProgressBarColorFromValue(technology.knowledgeLevel)" />
+    </div>
+</div>

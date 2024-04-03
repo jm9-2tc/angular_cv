@@ -1,12 +1,13 @@
-<div class="site-content">
-    <h1 id="welcome-text">{{ 'staticText.welcomeMessage' | translate }}</h1>
+<div class="site-content site-about">
+    <h1 class="welcome-text">{{ 'staticText.welcomeMessage' | translate }}</h1>
     <app-sidelined-paragraph>
         {{ 'aboutMe.description' | translate }}
     </app-sidelined-paragraph>
 
-    <app-sliding-panel />
-
-    <div id="certs">
-
+    <div class="certs">
+        <h2>{{ 'staticText.myExperience' | translate }}</h2>
+        <div class="certs-box">
+            <app-technology-experience-marker *ngFor="let tech of knownTechnologies" [technology]="tech" />
+        </div>
     </div>
 </div>

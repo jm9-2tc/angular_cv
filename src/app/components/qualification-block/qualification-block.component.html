@@ -1,0 +1,20 @@
+<div class="edu-institution-block institution" *ngIf="institution">
+    <div>
+        <h1>{{ institution.institutionName }}</h1>
+        <p>{{ institution.description }}</p>
+    </div>
+    <div class="years">
+        <span>{{ institution.years.from }} - {{ institution.years.to }}</span>
+    </div>
+</div>
+
+<div class="edu-institution-block certificate" *ngIf="cert">
+    <div>
+        <a [href]="cert.link">
+            <img [src]="cert.iconPath" [alt]="cert.iconPath + ' icon'">
+        </a>
+    </div>
+    <div>
+        <h1>{{ cert.title }}</h1>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="site-content site-qualifications">
+    <h1>{{ 'staticText.education' | translate }}</h1>
+    <div class="institutions">
+        <app-qualification-block *ngFor="let institution of eduInstitutions" [institution]="institution" />
+    </div>
+
+    <mat-divider />
+
+    <h1>{{ 'staticText.certificates' | translate }}</h1>
+    <div class="certificates">
+        <app-qualification-block *ngFor="let cert of certificates" [cert]="cert" />
+    </div>
+</div>

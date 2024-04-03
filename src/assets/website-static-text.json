@@ -4,5 +4,23 @@
             "en": "Welcome",
             "pl": "Witaj"
         }
+    },
+    "myExperience": {
+        "$translate": {
+            "en": "My experience",
+            "pl": "Moje doświadczenie"
+        }
+    },
+    "education": {
+        "$translate": {
+            "en": "Education",
+            "pl": "Wykształcenie"
+        }
+    },
+    "certificates": {
+        "$translate": {
+            "en": "Certificates",
+            "pl": "Certyfikacje"
+        }
     }
 }

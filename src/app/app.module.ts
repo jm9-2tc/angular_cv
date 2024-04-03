@@ -13,9 +13,15 @@ import { MenuComponent } from "./components/menu/menu.component";
 import { SiteAboutComponent } from "./components/site-about/site-about.component";
 import { SidelinedParagraphComponent } from "./components/sidelined-paragraph/sidelined-paragraph.component";
 
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import { SlidingPanelComponent } from './components/sliding-panel/sliding-panel.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatIconModule } from "@angular/material/icon";
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDividerModule } from '@angular/material/divider';
+
+import { SlidingPanelComponent } from './components/sliding-panel/sliding-panel.component';
+import { TechnologyExperienceMarkerComponent } from './components/technology-experience-marker/technology-experience-marker.component';
+import { SiteQualificationsComponent } from './components/site-qualifications/site-qualifications.component';
+import { QualificationBlockComponent } from './components/qualification-block/qualification-block.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +29,10 @@ import { MatIconModule } from "@angular/material/icon";
         SidelinedParagraphComponent,
         SiteAboutComponent,
         MenuComponent,
-        SlidingPanelComponent
+        SlidingPanelComponent,
+        TechnologyExperienceMarkerComponent,
+        SiteQualificationsComponent,
+        QualificationBlockComponent
     ],
     imports: [
         BrowserModule,
@@ -41,7 +50,9 @@ import { MatIconModule } from "@angular/material/icon";
         // components:
 
         MatIconModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatProgressBarModule,
+        MatDividerModule
     ],
     providers: [
         provideClientHydration(),

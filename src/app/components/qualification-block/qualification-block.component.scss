@@ -1,0 +1,36 @@
+@use '@angular/material' as mat;
+
+.edu-institution-block {
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    display: grid;
+}
+
+.edu-institution-block.institution {
+    grid-template-columns: auto auto;
+
+    .years {
+        text-align: right;
+        font-size: 24px;
+    }
+}
+
+.edu-institution-block.certificate {
+    grid-template-columns: 30% 70%;
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+}
+
+@mixin theme($theme) {
+    $color: mat.get-theme-color($theme, accent, default);
+
+    .edu-institution-block {
+        border: 2px solid $color;
+    }
+}
