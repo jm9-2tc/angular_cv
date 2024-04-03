@@ -17,13 +17,16 @@
 }
 
 .edu-institution-block.certificate {
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 20% 80%;
 
-    h1 {
-        width: 100%;
-        text-align: center;
-        display: block;
+    div {
         margin: auto;
+        
+        h1 {
+            font-size: 36px;
+            line-height: 36px;
+            font-weight: 600;
+        }
     }
 }
 
