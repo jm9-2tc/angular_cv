@@ -17,7 +17,7 @@
         text-decoration: none;
         cursor: pointer;
 
-        ::before {
+        &::before {
             content: counter(nav-btns) ". ";
             font-size: 20px;
             font-weight: 600;
@@ -37,22 +37,32 @@
 @mixin theme($theme) {
     $underline-color: #ffffff34;
     $underline-hover-color: mat.get-theme-color($theme, primary, default);
+    $selected-color: mat.get-theme-color($theme, primary, darker);
     $text-color: mat.get-theme-color($theme, primary, default-contrast);
 
     .menu-container > a {
         color: $text-color;
         border-bottom: 2px solid $underline-color;
 
-        :hover {
+        &:hover {
             border-bottom-color: $underline-hover-color;
         }
 
-        ::before {
+        &::before {
             color: $underline-color;
         }
 
-        :hover::before {
+        &:hover::before {
             color: $underline-hover-color;
+        }
+        
+
+        &.selected {
+            border-bottom-color: $selected-color;
+        }
+
+        &.selected::before {
+            color: $selected-color;
         }
     }
 }

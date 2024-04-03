@@ -1,10 +1,10 @@
 <div class="menu-container">
     <div class="lang-switch">
         <span>EN</span>
-        <mat-slide-toggle (change)="switchLanguage()" hideIcon="true" />
+        <mat-slide-toggle (change)="switchLanguage()" hideIcon="true" color="primary" />
         <span>PL</span>
     </div>
 
-    <a routerLink="/" routerLinkActive="active">about me</a>
-    <a routerLink="/qualifications" routerLinkActive="active">qualifications</a>
+    <a routerLink="/" routerLinkActive="active" (click)="onSectionBtnClicked($event)" #selectedByDefault>about me</a>
+    <a routerLink="/qualifications" routerLinkActive="active" (click)="onSectionBtnClicked($event)">qualifications</a>
 </div>
