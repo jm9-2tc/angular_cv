@@ -17,11 +17,14 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatIconModule } from "@angular/material/icon";
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatChipsModule } from '@angular/material/chips';
 
 import { SlidingPanelComponent } from './components/sliding-panel/sliding-panel.component';
 import { TechnologyExperienceMarkerComponent } from './components/technology-experience-marker/technology-experience-marker.component';
 import { SiteQualificationsComponent } from './components/site-qualifications/site-qualifications.component';
 import { QualificationBlockComponent } from './components/qualification-block/qualification-block.component';
+import { SiteProjectsComponent } from './components/site-projects/site-projects.component';
+import { ProjectInfoBlockComponent } from './components/project-info-block/project-info-block.component';
 
 @NgModule({
     declarations: [
@@ -32,7 +35,9 @@ import { QualificationBlockComponent } from './components/qualification-block/qu
         SlidingPanelComponent,
         TechnologyExperienceMarkerComponent,
         SiteQualificationsComponent,
-        QualificationBlockComponent
+        QualificationBlockComponent,
+        SiteProjectsComponent,
+        ProjectInfoBlockComponent
     ],
     imports: [
         BrowserModule,
@@ -52,7 +57,8 @@ import { QualificationBlockComponent } from './components/qualification-block/qu
         MatIconModule,
         MatSlideToggleModule,
         MatProgressBarModule,
-        MatDividerModule
+        MatDividerModule,
+        MatChipsModule
     ],
     providers: [
         provideClientHydration(),

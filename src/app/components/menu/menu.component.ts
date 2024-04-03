@@ -11,9 +11,6 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class MenuComponent implements AfterViewInit {
 
-  //@ViewChild('selectedByDefault')
-  //private btnSelectedByDefaultRef!: ;
-
   @ViewChildren(RouterLink, { read: ElementRef })
   private sectionBtns!: QueryList<ElementRef>;
 
@@ -21,10 +18,10 @@ export class MenuComponent implements AfterViewInit {
   private lastClickedBtn?: HTMLElement;
 
   sections = [
-    {title: 'about', link: '/'},
-    {title: 'qualifications', link: '/qualifications'},
-    {title: 'projects', link: '/projects'},
-    {title: 'contact', link: '/contact'},
+    {translationId: 'staticText.menuSections.about', link: '/'},
+    {translationId: 'staticText.menuSections.qualifications', link: '/qualifications'},
+    {translationId: 'staticText.menuSections.projects', link: '/projects'},
+    {translationId: 'staticText.menuSections.contact', link: '/contact'},
   ]
 
   constructor(private translate: TranslateService, private location: Location) {

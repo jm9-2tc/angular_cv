@@ -1,4 +1,31 @@
 {
+    "menuSections": {
+        "about": {
+            "$translate": {
+                "en": "about me",
+                "pl": "o mnie"
+            }
+        },
+        "qualifications": {
+            "$translate": {
+                "en": "qualifications",
+                "pl": "kwalifikacje"
+            }
+        },
+        "projects": {
+            "$translate": {
+                "en": "projects",
+                "pl": "projekty"
+            }
+        },
+        "contact": {
+            "$translate": {
+                "en": "contact",
+                "pl": "kontakt"
+            }
+        }
+    },
+
     "welcomeMessage": {
         "$translate": {
             "en": "Welcome",
@@ -20,7 +47,19 @@
     "certificates": {
         "$translate": {
             "en": "Certificates",
-            "pl": "Certyfikacje"
+            "pl": "Certyfikaty"
+        }
+    },
+    "myProjects": {
+        "$translate": {
+            "en": "My projects",
+            "pl": "Moje projekty"
+        }
+    },
+    "involvedTechnologies": {
+        "$translate": {
+            "en": "involved technologies",
+            "pl": "wykorzystane technologie"
         }
     }
 }

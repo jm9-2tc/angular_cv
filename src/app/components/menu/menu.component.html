@@ -1,16 +1,11 @@
 <div class="menu-container">
+    <a *ngFor="let section of sections" class="section-btn" [routerLink]="section.link" routerLinkActive="active" (click)="onSectionBtnClicked($event)">
+        {{ section.translationId | translate }}
+    </a>
+
     <div class="lang-switch">
         <span>EN</span>
         <mat-slide-toggle (change)="switchLanguage()" hideIcon="true" color="primary" />
         <span>PL</span>
     </div>
-
-    <a *ngFor="let section of sections" #sectionBtn class="section-btn" [routerLink]="section.link" routerLinkActive="active" (click)="onSectionBtnClicked($event)">
-        {{ section.title }}
-    </a>
-
-    <!--<a routerLink="/" routerLinkActive="active" (click)="onSectionBtnClicked($event)" #selectedByDefault>about me</a>
-    <a routerLink="/qualifications" routerLinkActive="active" (click)="onSectionBtnClicked($event)">qualifications</a>
-    <a routerLink="/projects" routerLinkActive="active" (click)="onSectionBtnClicked($event)">projects</a>
-    <a routerLink="/contact" routerLinkActive="active" (click)="onSectionBtnClicked($event)">contact</a>-->
 </div>

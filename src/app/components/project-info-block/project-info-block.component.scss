@@ -1,0 +1,40 @@
+@use '@angular/material' as mat;
+
+.project-block {
+    margin: 3em 2em;
+    padding: 2em;
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 12em;
+
+    .project-info {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            margin: 0 0.2em;
+        }
+
+        .technologies {
+            margin-top: auto;
+    
+            h2 {
+                margin: 0;
+                font-size: 1rem;
+            }
+    
+            mat-chip-set {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@mixin theme($theme) {
+    $color: mat.get-theme-color($theme, primary, lighter);
+
+    .project-block {
+        border: 2px solid $color;
+    }
+}

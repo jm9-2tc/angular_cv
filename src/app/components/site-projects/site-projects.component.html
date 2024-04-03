@@ -1,0 +1,6 @@
+<div class="site-content site-projects">
+    <h1>{{ 'staticText.myProjects' | translate }}</h1>
+    <div class="projects-list">
+        <app-project-info-block *ngFor="let project of projects" [project]="project" />
+    </div>
+</div>

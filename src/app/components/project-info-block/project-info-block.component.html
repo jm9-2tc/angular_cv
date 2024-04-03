@@ -1,0 +1,15 @@
+<div class="project-block">
+    <img [src]="project.imagePath" [alt]="project.imagePath + ' image'" draggable="false">
+    <div class="project-info">
+        <h1>{{ project.name }}</h1>
+        <p>{{ project.description }}</p>
+        <div class="technologies">
+            <h2>{{ 'staticText.involvedTechnologies' | translate }}:</h2>
+            <mat-chip-set class="example-chip">
+                @for (technology of project.involvedTechnologies; track technology) {
+                    <mat-chip class="example-box" disableRipple="true">{{ technology }}</mat-chip>
+                }
+            </mat-chip-set>
+        </div>
+    </div>
+</div>

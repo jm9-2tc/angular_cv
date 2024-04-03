@@ -6,6 +6,7 @@
 @use '../app/components/sidelined-paragraph/sidelined-paragraph.component.scss' as sidelined-paragraph-component;
 @use '../app/components/site-about/site-about.component.scss' as site-about-component;
 @use '../app/components/qualification-block/qualification-block.component.scss' as qualification-block-component;
+@use '../app/components/project-info-block/project-info-block.component.scss' as project-info-block-component;
 
 /* end */
 
@@ -48,3 +49,4 @@ $cv-theme: mat.define-dark-theme((
 @include sidelined-paragraph-component.theme($cv-theme);
 @include site-about-component.theme($cv-theme);
 @include qualification-block-component.theme($cv-theme);
+@include project-info-block-component.theme($cv-theme);
