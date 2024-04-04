@@ -1,5 +1,5 @@
 <div class="menu-container">
-    <a *ngFor="let section of sections" class="section-btn" [routerLink]="section.link" routerLinkActive="active" (click)="onSectionBtnClicked($event)">
+    <a *ngFor="let section of sections" class="section-btn" [routerLink]="section.link" routerLinkActive="active">
         {{ section.translationId | translate }}
     </a>
 
@@ -8,4 +8,6 @@
         <mat-slide-toggle (change)="switchLanguage()" hideIcon="true" color="primary" />
         <span>PL</span>
     </div>
+
+    <!-- (click)="onSectionBtnClicked($event)" -->
 </div>

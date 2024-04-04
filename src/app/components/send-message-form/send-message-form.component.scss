@@ -1,0 +1,18 @@
+.send-message-form {
+    display: flex;
+    flex-direction: column;
+
+    textarea {
+        margin: 0;
+    }
+
+    div {
+        margin-bottom: 2em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        button {
+            margin: 0.5em;
+        }
+    }
+}

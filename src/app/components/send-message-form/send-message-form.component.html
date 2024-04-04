@@ -1,0 +1,21 @@
+<div class="send-message-form">
+    <mat-form-field>
+        <mat-label>{{ 'staticText.contact.form.author' | translate }}</mat-label>
+        <input matInput [(ngModel)]="message.author" (ngModelChange)="onMessageUpdated()">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>{{ 'staticText.contact.form.title' | translate }}</mat-label>
+        <input matInput [(ngModel)]="message.title" (ngModelChange)="onMessageUpdated()">
+    </mat-form-field>
+    
+    <mat-form-field>
+        <mat-label>{{ 'staticText.contact.form.message' | translate }}</mat-label>
+        <textarea matInput [(ngModel)]="message.message" (ngModelChange)="onMessageUpdated()"></textarea>
+    </mat-form-field>
+
+    <div>
+        <button mat-flat-button color="accent" [disabled]="!allowSend" (click)="onSendBtnClicked()">{{ 'staticText.contact.form.send' | translate }}</button>
+        <button mat-flat-button color="primary" (click)="onClearBtnClicked()">{{ 'staticText.contact.form.clear' | translate }}</button>
+    </div>
+</div>

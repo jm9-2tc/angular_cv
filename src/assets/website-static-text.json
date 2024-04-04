@@ -61,5 +61,53 @@
             "en": "involved technologies",
             "pl": "wykorzystane technologie"
         }
+    },
+    "contact": {
+        "form": {
+            "author": {
+                "$translate": {
+                    "en": "author",
+                    "pl": "autor"
+                }
+            },
+            "title": {
+                "$translate": {
+                    "en": "title",
+                    "pl": "tytuł"
+                }
+            },
+            "message": {
+                "$translate": {
+                    "en": "message",
+                    "pl": "wiadomość"
+                }
+            },
+            "send": {
+                "$translate": {
+                    "en": "send",
+                    "pl": "wyślij"
+                }
+            },
+            "clear": {
+                "$translate": {
+                    "en": "clear",
+                    "pl": "wyczyść"
+                }
+            },
+            "sendViaEmail": {
+                "$translate": {
+                    "en": "send via e-mail",
+                    "pl": "wyślij przez e-mail"
+                }
+            }
+        },
+        "headers": {
+            "sendMessage": {
+                "$translate": {
+                    "en": "send me a message",
+                    "pl": "wyślij mi wiadomość"
+                }
+            }
+        }
     }
 }

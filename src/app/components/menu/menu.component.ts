@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { AfterViewInit, OnDestroy, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -18,7 +18,7 @@ export class MenuComponent implements AfterViewInit {
   private lastClickedBtn?: HTMLElement;
 
   sections = [
-    {translationId: 'staticText.menuSections.about', link: '/'},
+    {translationId: 'staticText.menuSections.about', link: '/about'},
     {translationId: 'staticText.menuSections.qualifications', link: '/qualifications'},
     {translationId: 'staticText.menuSections.projects', link: '/projects'},
     {translationId: 'staticText.menuSections.contact', link: '/contact'},
@@ -31,16 +31,7 @@ export class MenuComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    const currentRoute = this.location.path();
-    let i = 0;
-
-    this.sectionBtns.forEach((btnRef) => {
-      const btn = btnRef.nativeElement;
-      const href = btn.attributes.getNamedItem('ng-reflect-router-link')?.value;
-      if (href == currentRoute) {
-        this.selectSectionBtn(btn);
-      }
-    });
+    this.location.onUrlChange((url, state) => this.onURLChange(url));
   }
 
   switchLanguage() {
@@ -48,8 +39,14 @@ export class MenuComponent implements AfterViewInit {
     this.translate.use(this.useEnglish ? 'en' : 'pl');
   }
 
-  onSectionBtnClicked(event: Event) {
-    this.selectSectionBtn(event.target as HTMLElement);
+  onURLChange(url: string) {
+    this.sectionBtns.forEach((btnRef) => {
+      const btn = btnRef.nativeElement;
+      const href = btn.attributes.getNamedItem('ng-reflect-router-link')?.value;
+      if (href == url) {
+        this.selectSectionBtn(btn);
+      }
+    });
   }
 
   selectSectionBtn(btn: HTMLElement) {

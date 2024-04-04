@@ -1,0 +1,23 @@
+<div class="site-content site-contact">
+    <h1>{{ 'staticText.contact.headers.sendMessage' | translate }}</h1>
+
+    <app-send-message-form [(message)]="message" />
+
+    <div class="email-container">
+        <button mat-flat-button color="accent" (click)="sendEmail()">{{ 'staticText.contact.form.sendViaEmail' | translate }}</button>
+    </div>
+
+    <mat-divider />
+
+    <div class="contact-info-container">
+        <div>
+            <mat-icon>phone</mat-icon>
+            <h1>{{ 'contactInfo.phone' | translate }}</h1>
+        </div>
+    
+        <div>
+            <mat-icon>mail</mat-icon>
+            <h1>{{ 'contactInfo.email' | translate }}</h1>
+        </div>
+    </div>
+</div>
